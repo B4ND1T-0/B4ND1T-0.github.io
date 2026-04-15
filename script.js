@@ -5,16 +5,6 @@ async function getJson(jsonPath) {
   return stats;
 }
 
-const img_ext = ["png","gif"]
-function getImage() {
-  if (i >= img_ext.length) {
-    img.src = window.location.href + `/assets/profile/default.png`;
-    return;
-  }
-  img.src = window.location.href + `/assets/profile/${member.name}.${img_ext[i]}`;
-  i++
-}
-
 function populateMembers(where, members) {
   const table = document.querySelector(where);
   if (table === null) {
@@ -40,10 +30,8 @@ function populateMembers(where, members) {
     const pName = document.createElement("p");
     const divBio = document.createElement("div");
 
-    //img.src = window.location.href + `/assets/profile/${member.name}.png`;
-    let i = 1;
-    img.onerror = () => getImage();
-    getImage()
+    img.src = window.location.href + `/assets/profile/${member.name}.png`;
+    img.onerror = () => img.src = window.location.href + `/assets/profile/default.png`;
     img.alt = member.name;
     img.className = "member-pfp";
     tdImage.appendChild(img);
