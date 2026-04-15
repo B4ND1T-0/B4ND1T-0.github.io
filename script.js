@@ -41,6 +41,7 @@ function populateMembers(where, members) {
     const divBio = document.createElement("div");
 
     //img.src = window.location.href + `/assets/profile/${member.name}.png`;
+    let i = 1;
     img.onerror = () => getImage();
     getImage()
     img.alt = member.name;
