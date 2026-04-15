@@ -22,6 +22,8 @@
         "name": "re1gn",
         "bio" : "somethin",
         "tags": ["osint"],
-        "socials" : {}
+        "socials" : {
+            "Website": "https://re1gn182.github.io/"
+        }
     }
 ]
