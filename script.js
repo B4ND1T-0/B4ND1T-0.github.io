@@ -199,5 +199,5 @@ getJson("/data/members.json")
   .then(data => populateMembers(".active-members",data));
 getJson("/data/past_members.json")
   .then(data => populateMembers(".past-members",data));
-getJson("/data/teamstats.json")
-  .then(data => populateTeamStats(".team-stats", data));
+// getJson("/data/teamstats.json")
+//   .then(data => populateTeamStats(".team-stats", data));
